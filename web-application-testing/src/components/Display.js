@@ -1,7 +1,7 @@
 import React from 'react';
 
-class Display extends React.Component {
-    render() {
+function Display() {
+   
         return (
             <div className='display'>
                 <h3>Balls: </h3>
@@ -9,6 +9,7 @@ class Display extends React.Component {
             </div>
         )
     }
-}
 
-export default Display;
+    export default Display;
+
+

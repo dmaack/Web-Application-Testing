@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/core": "^7.6.2",
     "jest": "^24.9.0",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",

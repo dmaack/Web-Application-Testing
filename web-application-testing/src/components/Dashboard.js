@@ -1,8 +1,7 @@
 import React from 'react';
 
-
-class Dashboard extends React.Component {
-    render() {
+function Dashboard() {
+    
         return(
             <div className='dashboard'>
                 <button>Strike</button>
@@ -12,6 +11,7 @@ class Dashboard extends React.Component {
             </div>
         )
     }
-}
 
 export default Dashboard;
+
+
