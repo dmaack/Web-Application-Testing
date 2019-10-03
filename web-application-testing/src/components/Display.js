@@ -1,14 +1,21 @@
 import React from 'react';
 
-function Display() {
-   
+const Display = props => {
+    
         return (
-            <div className='display'>
-                <h3>Balls: </h3>
-                <h3>Strikes: </h3>
+            <div className='display-container'>
+                <div>
+                    <h3>Balls: {props.balls}</h3>
+                </div>
+                <div>
+                    <h3>Strikes: {props.strikes}</h3>
+                </div>
+                
             </div>
         )
     }
+    
+        
 
     export default Display;
 

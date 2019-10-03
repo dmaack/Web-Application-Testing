@@ -4,27 +4,41 @@ import Display from './components/Display';
 
 import './App.css';
 
-class App extends React.Component  {
-  constructor(){
-    super();
-    this.state = {
-      ballCount: 0,
-      strikeCount: 0
+function App()  {
+  //intial state
+    const [balls, setBalls] = useState(0);
+    const [strikes, setStrikes] = useState(0);
+  
+
+  const ballChange= () => {
+    if(balls < 3) {
+      return setBalls(balls + 1)
+    } else if (balls === 3) {
+      // return setBalls(balls - 3)
+      return setBalls(0)
     }
   }
 
-  // const [ballValue, setBallValue] = useState(0);
-  // const [strikeValue, setStrikeValue] = useState(0);
+  const strikeChange= () => {
+    if(strikes < 2) {
+      return setStrikes(strikes + 1)
+    } else if(strikes === 2) {
+      // return setStrikes(strikes -2)
+      return setStrikes(0)
+    }
+  }
 
-render() {
+
+
+
   return (
     <div className="App">
       <h1>Baseball Scoreboard</h1>
-      <Display />
-      <Dashboard />
+      <Display balls={balls} strikes={strikes}/>
+      <Dashboard ballChange={ballChange} strikeChange={strikeChange}/>
     </div>
   );
-}
+
 }
 
 

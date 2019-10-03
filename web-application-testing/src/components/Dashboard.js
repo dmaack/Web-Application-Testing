@@ -1,16 +1,18 @@
 import React from 'react';
 
-function Dashboard() {
-    
+const Dashboard = props => {
+  
         return(
             <div className='dashboard'>
-                <button>Strike</button>
-                <button>Ball</button>
+                <button onClick={props.strikeChange}>Strike</button>
+                <button onClick={props.ballChange}>Ball</button>
                 <button>Foul</button>
                 <button>Hit</button>
             </div>
         )
     }
+    
+        
 
 export default Dashboard;
 
