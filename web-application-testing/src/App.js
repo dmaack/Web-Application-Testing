@@ -10,7 +10,7 @@ function App()  {
     const [strikes, setStrikes] = useState(0);
   
 
-  const ballChange= () => {
+  const ballChange = () => {
     if(balls < 3) {
       return setBalls(balls + 1)
     } else if (balls === 3) {
@@ -19,7 +19,7 @@ function App()  {
     }
   }
 
-  const strikeChange= () => {
+  const strikeChange = () => {
     if(strikes < 2) {
       return setStrikes(strikes + 1)
     } else if(strikes === 2) {
@@ -28,14 +28,21 @@ function App()  {
     }
   }
 
+const foulChange = () => {
+  if (strikes < 2) {
+    return setStrikes(strikes + 1)
+  }
+}
 
-
+const hitChange = () => {
+  return (setStrikes(0) || setBalls(0))
+}
 
   return (
     <div className="App">
       <h1>Baseball Scoreboard</h1>
       <Display balls={balls} strikes={strikes}/>
-      <Dashboard ballChange={ballChange} strikeChange={strikeChange}/>
+      <Dashboard ballChange={ballChange} strikeChange={strikeChange} foulChange={foulChange} hitChange={hitChange}/>
     </div>
   );
 
