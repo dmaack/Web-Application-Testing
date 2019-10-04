@@ -4,6 +4,17 @@ import Display from './components/Display';
 
 import './App.css';
 
+export const addStrike = (strikes, setStrikes) => {
+  if(strikes < 2) {
+    return setStrikes(strikes + 1)
+  } else if(strikes === 2) {
+    // return setStrikes(strikes -2)
+    return setStrikes(0)
+  }
+}
+
+
+
 function App()  {
   //intial state
     const [balls, setBalls] = useState(0);
