@@ -4,10 +4,10 @@
   "private": true,
   "dependencies": {
     "@babel/core": "^7.6.2",
-    "jest": "^24.9.0",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "webpack-dev-server": "^3.8.2"
   },
   "scripts": {
     "start": "react-scripts start",
